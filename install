@@ -2,9 +2,14 @@
 
 set -e
 
-apt-get -y install sudo
+apt-get -y update && apt-get install sudo
 
-sudo apt-get -y install lsb-release
+apt-get -y install zsh screen tree sudo ssh synaptic vim minicom git wget
+
+# Additional development tools
+apt-get install -y x11-apps python-pip build-essential lsb-release
+pip install catkin_tools
+pip install pyparsing==1.5.7
 
 ARCH=$(uname -i)
 RELEASE=$(lsb_release -c -s)
@@ -23,9 +28,6 @@ else
     exit 1
 fi
 
-sudo apt-get -y install wget
-
-sudo apt-get update
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 sudo apt-get update
