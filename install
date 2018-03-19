@@ -4,7 +4,7 @@ set -e
 
 apt-get -y update && apt-get install sudo
 
-apt-get -y install zsh screen tree sudo ssh synaptic vim minicom git wget gawk make curl cmake
+apt-get -y install zsh screen tree sudo ssh synaptic vim minicom git wget gawk make curl cmake unzip
 
 # Additional development tools
 apt-get install -y x11-apps python-pip build-essential lsb-release
@@ -38,6 +38,7 @@ if [ $ARCH == "x86_64" ]
         echo "Installing ROS-$ROSDISTRO Full Desktop Version"
         
         sudo apt-get -y install ros-$ROSDISTRO-gazebo-*
+        rm -rf /var/lib/apt/lists/*
         echo "Installing Gazebo Full Desktop Version"
 
 else  
