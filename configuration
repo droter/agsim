@@ -1,3 +1,6 @@
+
+sudo rosdep fix-permissions
+rosdep update
 rosdep install --default-yes --from-paths . --ignore-src --rosdistro $ROSDISTRO
 
 # Environment Configuration
