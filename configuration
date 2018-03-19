@@ -1,0 +1,16 @@
+rosdep install --default-yes --from-paths . --ignore-src --rosdistro $ROSDISTRO
+
+# Environment Configuration
+export PYTHONPATH=$PYTHONPATH:/usr/lib/python2.7/dist-packages
+echo "source /opt/ros/$ROSDISTRO/setup.bash" >> ~/.bashrc
+source ~/.bashrc 
+
+# Install ROS-A Simulator
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/src
+git clone https://github.com/ros-agriculture/microtrac_simulator.git
+
+
+echo ""
+echo "ROS $(rosversion -d) Installation Done!"
+echo "You can create your catkin workspace now. https://wiki.ros.org/catkin/Tutorials/create_a_workspace"
