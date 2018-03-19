@@ -48,6 +48,6 @@ fi
 
 sudo apt-get install python-rosdep -y
 sudo `which rosdep` init
-rosdep update
+
 
 
