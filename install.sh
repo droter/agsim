@@ -4,7 +4,7 @@ set -e
 
 apt-get -y install sudo apt-utils
 
-sudo apt-get install software-properties-common python-software-properties
+sudo apt-get -y install software-properties-common python-software-properties
 sudo add-apt-repository ppa:git-core/ppa
 add-apt-repository universe
 apt-get -y update
