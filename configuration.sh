@@ -23,7 +23,7 @@ scripts/install-sdk.sh
 npm install
 
 # Tweak standlone.js conf
-RUN sed -i -e 's_127.0.0.1_0.0.0.0_g' /opt/cloud9/configs/standalone.js 
+sed -i -e 's_127.0.0.1_0.0.0.0_g' /opt/cloud9/configs/standalone.js 
 
 
 # Environment Configuration
