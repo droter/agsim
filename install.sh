@@ -3,12 +3,14 @@
 set -e
 
 apt-get -y install sudo apt-utils
+
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:git-core/ppa
 add-apt-repository universe
 apt-get -y update
 
 apt-get -y install zsh screen tree sudo ssh synaptic \
     vim minicom git wget gawk make curl cmake unzip \
-    software-properties-common python-software-properties \
     apt-transport-https ca-certificates iputils-ping dpkg 
     
 # Additional development tools
