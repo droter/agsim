@@ -23,7 +23,7 @@ sudo -H pip install jupyter
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo add-apt-repository universe
 sudo apt-get update
-sudo apt-get install libgconf2-4 libnss3-1d libxss1
+sudo apt-get -y install libgconf2-4 libnss3-1d libxss1
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt-get -fy install
 
