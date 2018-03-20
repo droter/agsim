@@ -2,10 +2,11 @@
 
 set -e
 
+apt-get -y install sudo
 sudo add-apt-repository universe
-apt-get -y update && apt-get install -y apt-utils sudo
+apt-get -y update
 
-apt-get -y install zsh screen tree sudo ssh synaptic \
+apt-get -y install apt-utils zsh screen tree sudo ssh synaptic \
     vim minicom git wget gawk make curl cmake unzip \
     software-properties-common python-software-properties \
     apt-transport-https ca-certificates iputils-ping dpkg 
