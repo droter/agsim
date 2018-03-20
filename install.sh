@@ -7,22 +7,25 @@ apt-get -y update && apt-get install sudo
 apt-get -y install zsh screen tree sudo ssh synaptic \
     vim minicom git wget gawk make curl cmake unzip \
     software-properties-common python-software-properties \
-    apt-transport-https ca-certificates iputils-ping dpkg
+    apt-transport-https ca-certificates iputils-ping dpkg \
+    apt-utils
 
 
 # Additional development tools
 apt-get install -y x11-apps python-pip build-essential lsb-release
+sudo -H pip install --upgrade pip
 pip install catkin_tools
 pip install pyparsing==1.5.7
 
 # demo tools Jupyter Notebook
 apt-get -y install ipython ipython-notebook
-sudo -H pip install --upgrade pip
 sudo -H pip install jupyter
 
 # Chrome web browser
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb; sudo apt-get -fy install
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt-get install -f
+sudo apt-get -y install
 
 ARCH=$(uname -i)
 RELEASE=$(lsb_release -c -s)
