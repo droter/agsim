@@ -4,13 +4,11 @@ set -e
 
 apt-get -y update && apt-get install sudo
 
-apt-get -y install zsh screen tree sudo ssh synaptic \
+apt-get -y install apt-utils zsh screen tree sudo ssh synaptic \
     vim minicom git wget gawk make curl cmake unzip \
     software-properties-common python-software-properties \
-    apt-transport-https ca-certificates iputils-ping dpkg \
-    apt-utils
-
-
+    apt-transport-https ca-certificates iputils-ping dpkg 
+    
 # Additional development tools
 apt-get install -y x11-apps python-pip build-essential lsb-release
 sudo -H pip install --upgrade pip
