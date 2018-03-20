@@ -2,7 +2,8 @@
 
 set -e
 
-apt-get -y update && apt-get install apt-utils sudo
+sudo add-apt-repository universe
+apt-get -y update && apt-get install -y apt-utils sudo
 
 apt-get -y install zsh screen tree sudo ssh synaptic \
     vim minicom git wget gawk make curl cmake unzip \
@@ -21,8 +22,6 @@ sudo -H pip install jupyter
 
 # Chrome web browser
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo add-apt-repository universe
-sudo apt-get update
 sudo apt-get -y install libgconf2-4 libnss3-1d libxss1
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt-get -fy install
