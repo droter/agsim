@@ -24,6 +24,7 @@ apt-get -y install ipython ipython-notebook
 sudo -H pip install jupyter
 
 # Chrome web browser
+apt-get -y install fonts-liberation libappindicator1 libasound2
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt-get -y install libgconf2-4 libnss3-1d libxss1
 sudo dpkg -i google-chrome-stable_current_amd64.deb
