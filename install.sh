@@ -7,7 +7,7 @@ apt-get -y update && apt-get install sudo
 apt-get -y install zsh screen tree sudo ssh synaptic \
     vim minicom git wget gawk make curl cmake unzip \
     software-properties-common python-software-properties \
-    apt-transport-https ca-certificates iputils-ping
+    apt-transport-https ca-certificates iputils-ping dpkg
 
 
 # Additional development tools
