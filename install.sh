@@ -19,6 +19,12 @@ sudo -H pip install --upgrade pip
 pip install catkin_tools
 pip install pyparsing==1.5.7
 
+# installing interactive time zone
+export DEBCONF_NONINTERACTIVE_SEEN=true DEBIAN_FRONTEND=noninteractive
+apt-get -y install tzdata
+ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime
+dpkg-reconfigure --frontend noninteractive tzdata
+
 # demo tools Jupyter Notebook
 apt-get -y install ipython ipython-notebook
 sudo -H pip install jupyter
