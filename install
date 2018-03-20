@@ -61,8 +61,8 @@ fi
 
 sudo apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-echo ". /opt/ros/kinetic/setup.bash" >> ~/.bashrc && \
-. /opt/ros/kinetic/setup.sh
+echo ". /opt/ros/$ROSDISTRO/setup.bash" >> ~/.bashrc && \
+. /opt/ros/$ROSDISTRO/setup.sh
 
 sudo apt-get install python-rosdep -y
 sudo `which rosdep` init
